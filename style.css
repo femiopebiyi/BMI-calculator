@@ -41,3 +41,7 @@ button{
 span{
     font-weight: 700;
 }
+
+input{
+    padding: .5em 0;
+}

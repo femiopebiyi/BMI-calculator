@@ -31,14 +31,14 @@ function calculateBMI (){
 
 computeBMI.addEventListener('click', function(){
     if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
-        resultDisplay.innerHTML = 'Please input values in number'
+        resultDisplay.innerHTML = 'Please input value in numbers only!!'
         setTimeout(function(){
-            resultDisplay.innerHTML = `Your BMI:`
+            resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
-            resultDisplay.innerHTML = `Your BMI:`
+            resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
     } else{
         calculateBMI()
@@ -51,7 +51,7 @@ computeBMI.addEventListener('click', function(){
 document.body.addEventListener('keypress', function(event){
     if (event.key === 'Enter'){
         if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
-        resultDisplay.innerHTML = 'Please input values in number'
+        resultDisplay.innerHTML = 'Please input value in numbers only!!'
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI:`
         }, 2000)
