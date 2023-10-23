@@ -5,13 +5,13 @@ const computeBMI  = document.querySelector('button');
 
 function checkIfObese (BMI){
     if(BMI<= 18.5){
-        resultDisplay.innerHTML = `Your BMI is: ${BMI}. you're underweight please eat some food`
+        resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
     } else if(BMI > 18.5 && BMI <= 24.9){
-        resultDisplay.innerHTML = `Your BMI is: ${BMI}. congrats you're normal weight`
+        resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
     } else if(BMI> 24.9 && BMI <= 29.9){
-        resultDisplay.innerHTML = `Your BMI is: ${BMI}. you're pushing it now, slow down on dem Mcdonalds`
+        resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
     } else{
-        resultDisplay.innerHTML = `Your BMI is: ${BMI}. my brother in christ you are obese`
+        resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
     }
 }
 
@@ -21,16 +21,48 @@ function calculateBMI (){
 
     let BMI = (weightNum/((heightNum*heightNum)/10000)).toFixed(2)
 
-    checkIfObese(BMI)
+        
+        checkIfObese(BMI)
+    
+
+    
     
 }
 
 computeBMI.addEventListener('click', function(){
-    calculateBMI()
+    if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
+        resultDisplay.innerHTML = 'Please input values in number'
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI:`
+        }, 2000)
+    }else if(heightInput.value === '' || weightInput.value === ''){
+        resultDisplay.innerHTML = `don't leave any input empty!!`
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI:`
+        }, 2000)
+    } else{
+        calculateBMI()
+    }
+    
+    
+    
 })
 
 document.body.addEventListener('keypress', function(event){
     if (event.key === 'Enter'){
+        if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
+        resultDisplay.innerHTML = 'Please input values in number'
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI:`
+        }, 2000)
+    }else if(heightInput.value === '' || weightInput.value === ''){
+        resultDisplay.innerHTML = `don't leave any input empty!!`
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI:`
+        }, 2000)
+    } else{
         calculateBMI()
+    }
+    
     }
 })
