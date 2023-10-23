@@ -46,3 +46,18 @@ span{
 input{
     padding: .5em 0;
 }
+
+.bmi-tip{
+    width: 90%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+}
+.list{
+    list-style: square;
+}
+
+.match{
+    color: black;
+    font-weight: 700;
+}
