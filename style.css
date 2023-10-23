@@ -20,6 +20,7 @@ p{
 h1{
     text-align: center;
     color: white;
+    margin-top: 1em;
 }
 .container{
     width: 90%;
