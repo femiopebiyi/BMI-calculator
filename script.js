@@ -7,9 +7,9 @@ let info = document.querySelectorAll('li')
 function checkIfObese (BMI){
     if(BMI<= 18.5){
         resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
-    } else if(BMI > 18.5 && BMI <= 24.9){
+    } else if(BMI>=18.5 && BMI<=24.9){
         resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
-    } else if(BMI> 24.9 && BMI <= 29.9){
+    } else if(BMI>=25 && BMI<=29.9){
         resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
     } else{
         resultDisplay.innerHTML = `Your BMI is: <span>${BMI}</span>`
