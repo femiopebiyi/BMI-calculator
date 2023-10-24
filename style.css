@@ -51,6 +51,7 @@ color: black;
 
 input{
     padding: .5em 0;
+    margin-left: .4em;
 }
 
 .bmi-tip{
@@ -66,4 +67,22 @@ input{
 .match{
     color: black;
     font-weight: 700;
+}
+
+.units{
+    
+    width: 90%;
+    margin: 0 auto;
+}
+.units button{
+    padding: 0.4em;
+
+}
+#us-units{
+    margin-left: .6em;
+}
+
+.clicked{
+    background-color: white;
+    color: black;
 }
