@@ -90,19 +90,36 @@ computeBMI.addEventListener('click', function(){
 })
 
 document.body.addEventListener('keypress', function(event){
+
     if (event.key === 'Enter'){
+        if(weightInput.placeholder === 'kilograms'){
         if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
         resultDisplay.innerHTML = 'Please input value in numbers only!!'
         setTimeout(function(){
-            resultDisplay.innerHTML = `Your BMI:`
+            resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
-            resultDisplay.innerHTML = `Your BMI:`
+            resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
     } else{
         calculateBMI()
+    }
+    } else{
+        if(isNaN(heightInput.value * 5) || isNaN(weightInput.value * 5)){
+        resultDisplay.innerHTML = 'Please input value in numbers only!!'
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI is:`
+        }, 2000)
+    }else if(heightInput.value === '' || weightInput.value === ''){
+        resultDisplay.innerHTML = `don't leave any input empty!!`
+        setTimeout(function(){
+            resultDisplay.innerHTML = `Your BMI is:`
+        }, 2000)
+    } else{
+        calculateBMIUS()
+    }
     }
     
     }
