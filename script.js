@@ -201,8 +201,8 @@ function calculateBMIUS (){
 }
 
 
-computeBMI.addEventListener('click', function(){
-    if(weightInput.placeholder === 'pounds'){
-        calculateBMIUS()
-    }
-})
+// computeBMI.addEventListener('click', function(){
+//     if(weightInput.placeholder === 'pounds'){
+//         calculateBMIUS()
+//     }
+// })
