@@ -18,6 +18,7 @@ function checkIfObese (BMI){
     }
 }
 
+
 function calculateBMI (){
     let heightNum = Number(heightInput.value);
     let weightNum = Number(weightInput.value);
@@ -60,11 +61,13 @@ computeBMI.addEventListener('click', function(){
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     } else{
         calculateBMI()
     }
@@ -74,11 +77,13 @@ computeBMI.addEventListener('click', function(){
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     } else{
         calculateBMIUS()
     }
@@ -98,11 +103,13 @@ document.body.addEventListener('keypress', function(event){
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     } else{
         calculateBMI()
     }
@@ -112,11 +119,13 @@ document.body.addEventListener('keypress', function(event){
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     }else if(heightInput.value === '' || weightInput.value === ''){
         resultDisplay.innerHTML = `don't leave any input empty!!`
         setTimeout(function(){
             resultDisplay.innerHTML = `Your BMI is:`
         }, 2000)
+        removeMatch()
     } else{
         calculateBMIUS()
     }
@@ -141,10 +150,14 @@ metricUnits.addEventListener ('click', function(){
     heightInput.value = '';
     weightInput.value = '';
     resultDisplay.innerHTML = 'Your BMI:'
+    removeMatch()
+})
+
+function removeMatch (){
     info.forEach(function(unitInfo){
         unitInfo.classList.remove('match')
     })
-})
+}
 
 usUnits.addEventListener ('click', function(){
     usUnits.classList.add('clicked');
@@ -156,9 +169,7 @@ usUnits.addEventListener ('click', function(){
     heightInput.value = ''
     weightInput.value = ''
     resultDisplay.innerHTML = 'Your BMI:'
-    info.forEach(function(unitInfo){
-        unitInfo.classList.remove('match')
-    })
+    removeMatch()
 
 })
 
